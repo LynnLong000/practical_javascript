@@ -20,3 +20,30 @@ v3
 - It should have a changeTodos method             c
 - It should have a deleteTodos method             c
 
+v4
+- todoList.addTodo should add objects
+- todoList.changeTodo should change the todoText property
+- todoList.toggleCompleted should change the completed property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
