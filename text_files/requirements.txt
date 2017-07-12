@@ -13,3 +13,10 @@ V2
 - It should have a function to change todos   c 
 - It should have a function to delete todos   c 
 
+v3 
+- It should store the todos array on an object    c
+- It should have a displayTodos method            c
+- It should have an addTodos  method              c 
+- It should have a changeTodos method             c
+- It should have a deleteTodos method             c
+
