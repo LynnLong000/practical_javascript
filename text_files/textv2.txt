@@ -1,0 +1,23 @@
+V2 NOW 
+
+Recipts
+
+makeTurkeySandwich
+    get one slice of bread.
+    Add turkey.
+    Put a slice of bread.
+    
+    
+function makeTurkeySandwich() {
+    get one slice of bread;
+    Add turkey;
+    Put a slice of bread;
+    }
+    
+    makeTurkeySandwich()  // like telling your employee to makeTurkeySandwich
+----------------------------------------------------------------------------------------
+
+    
+    
+    
+    

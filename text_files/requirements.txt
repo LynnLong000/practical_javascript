@@ -1,0 +1,15 @@
+// c means checked 
+
+V1 Requirements
+- It should have a place to store todos      c 
+- It should have a way to display todos      c 
+- It should have a way to add new todos      c 
+- It should have a way to change a todos     c
+- It should have a way to delete a todos     c
+
+V2
+- It should have a function to display todos  c
+- It should have a function to add todos      c
+- It should have a function to change todos   c 
+- It should have a function to delete todos   c 
+
