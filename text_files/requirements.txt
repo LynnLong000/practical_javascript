@@ -30,7 +30,10 @@ v5
 - .displayTodos should tell you if .todos is empty        c
 - .displayTodos should show .completed                    c    
 
-6
+v6
+- .toggleAll: if everything's true, make everything false  c
+- .toggleAll: otherwis, make everything true               c
+
 
 
 
