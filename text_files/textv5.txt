@@ -1,0 +1,54 @@
+i= 0                // Initialization
+say "hey" if i<3    // Condition
+Increase i by 1     // final-expression
+
+0 "hey"
+1 "hey"
+2 "hey"
+3
+
+
+for(initialization, condition, final-expression){
+  // do work
+}
+
+// write in code 
+
+// i = i + 1 shorthand ( shortcut)   i++
+
+for(var i=0 ; i<3 ;  i = i + 1){
+  console.log("hey");
+}
+
+
+// looping over arrays 
+
+var testArray[ 'item 1','item 2','item 3',]
+
+for(var i=0 ; i<3 ;  i = i + 1){
+  console.log(testArray[i])
+}
+
+// use array.length instead of 3 sometimes you dont know the length
+
+var testArray[ 'item 1','item 2','item 3', 'item 4','item 5','item 6']
+
+for(var i=0 ; i< testArray.length ;  i = i + 1){
+  console.log(testArray[i])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
