@@ -21,11 +21,16 @@ v3
 - It should have a deleteTodos method             c
 
 v4
-- todoList.addTodo should add objects
-- todoList.changeTodo should change the todoText property
-- todoList.toggleCompleted should change the completed property
+- todoList.addTodo should add objects                             C
+- todoList.changeTodo should change the todoText property         C
+- todoList.toggleCompleted should change the completed property   C
 
+v5 
+- .displayTodos should show .todoText                     c
+- .displayTodos should tell you if .todos is empty        c
+- .displayTodos should show .completed                    c    
 
+6
 
 
 
