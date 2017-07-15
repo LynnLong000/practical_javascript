@@ -1,0 +1,48 @@
+JS data types 
+ Objects (can be as complex as you want )
+
+{}  todoList , arrays , functions
+
+Primitives (building blocks) 
+
+String       'look at this string' 
+Number      1,2,3,4
+Boolean    true false 
+undefined    value that hasn't been set 
+null    nothing 
+
+
+comparsion   Primitives (values) // just like math 
+
+'lynn' ===  'lynn'    // true
+'lynn' === 'lynn1'  // false
+
+
+comparsion with objects are defferent
+
+{}  ===  {}  // false
+
+[1,2,3]  === [1,2,3]  // false 
+
+when comparing objects like house they can be exactly the same but it is trying to compare the address (memory address ) 
+
+Objects (references ) 
+when they say the references memory address or reference to that value 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

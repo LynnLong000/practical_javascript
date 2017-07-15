@@ -1,0 +1,10 @@
+DOM  
+Document Object model 
+html plain text 
+DOM is what the browser understands what it going to be 
+
+
+not allot of code in this version
+but alot of concepts
+
+.addEventListener was good one 

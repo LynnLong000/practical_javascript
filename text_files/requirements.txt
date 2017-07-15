@@ -35,8 +35,13 @@ v6
 - .toggleAll: otherwis, make everything true               c
 
 
+v7
+- there should be a "display todos " button and a "toggle all" button      c 
+- Clicking "display todos" should run todolist.displayTodos.               c  
+- Clicking "toggle all" should run todoList.toggleAll.                     c
 
 
+v8
 
 
 
