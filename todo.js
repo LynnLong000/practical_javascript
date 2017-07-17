@@ -1,7 +1,7 @@
 /* the teacher is using plunker but i'd rather stay in my C9
 hopefully that is not a issue 
 */
-// files says version 3 but i'm im branch four
+// version 8
 var todoList = {
     todos:[],
     displayTodos:function(){
@@ -63,13 +63,49 @@ var todoList = {
     }
 };
 
+var handlers ={
+    displayTodos:function(){
+        todoList.displayTodos();
+    },
+    addTodo:function(){
+        var addTodoTextInput = document.getElementById('addTodoTextInput');
+        todoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = '';
+    },
+    changeTodo:function(){
+        var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+        var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+        todoList.changeTodo(changeTodoPositionInput.valueAsNumber,changeTodoTextInput.value);
+        changeTodoPositionInput.value ='';
+        changeTodoTextInput.value = '';
+    },
+    deleteTodos:function(){
+        var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+        deleteTodoPositionInput.value ='';
+    },
+    toggleCompleted:function(){
+        var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+        todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+        toggleCompletedPositionInput.value='';
+    },
+    toggleAll:function(){
+        todoList.toggleAll();
+    }
+};
+
+// the difference is the top code and short and neat; bottom code is more drawn out
+
+
+/*   refactoring this code above
 var displayTodosButton = document.getElementById('displayTodosButton');
 var toggleAllButton = document.getElementById('toggleAllButton');
 
 displayTodosButton.addEventListener('click', function(){
     todoList.displayTodos();  
-})
+});
 
 toggleAllButton.addEventListener('click',function(){
-    todoList.toggleAll()
-})
+    todoList.toggleAll();
+});
+*/

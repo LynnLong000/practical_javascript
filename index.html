@@ -8,9 +8,33 @@
 <body><!--  things that will appear on the page  -->
     <h1>Todo List</h1>
     
+    <div>
+        <button onclick="handlers.displayTodos()">Display Todo</button>
+        <button onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
+    <div>
+        <button onclick="handlers.addTodos()">Add</button>
+        <input id="addTodoTextInput"type="text">
+    </div>
+    <div>
+        <button onclick="handlers.changeTodo()">Change Todo</button>
+        <input id="changeTodoPositionInput" type="number">
+        <input id="changeTodoTextInput" type="text">
+    </div>
+    <div>
+        <button onclick="handlers.deleteTodos">delete</button>
+        <input id="deleteTodoPositionInput" type='number'>
+    </div>
+    <div>
+        <button onclick="handlers.toggleCompleted()">toggle completed</button>
+        <input id="toggleCompletedPositionInput" type='number'>
+    </div>
+    
+    
+    <!--refactoring in html code above
     <button id="displayTodosButton">Display Todo</button>
     <button id="toggleAllButton">Toggle All</button>
-    
+    -->
     
     <script type="text/javascript" src="todo.js"></script>
 </body>

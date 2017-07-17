@@ -42,7 +42,10 @@ v7
 
 
 v8
-
+- It should have working controls for .addTodo             C
+- It should have working controls for .changeTodo          C
+- It should have working controls for .deleteTodo          C
+- It should have working controls for .toggleCompleted     C
 
 
 

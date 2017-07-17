@@ -16,3 +16,24 @@ ASK ALOT OF QUESTION
 know the code before you ask a question. 
 
 exhaust all option 
+
+//third interlude 
+DEBUGGER IS A KEY PART  
+
+Use  Debugger all the time when there is an issue 
+
+Helps understanding the code 
+
+Dont ask question that the debugger can tell you
+
+FOCUS ON UNDERSTANDING,NOT BUILDING FROM SCRATCH
+
+
+trying to memories everything is not possible 
+
+
+
+
+
+
+
