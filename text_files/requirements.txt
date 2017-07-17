@@ -52,7 +52,12 @@ V9
 - Each li element should contain .todoText           c
 - Each li element should show .completed             c
 
-
+v10
+- there should be a way to create delete buttons           c
+- there should be a delete button for each todoList        c
+- each li should have an id that has the todo position     c
+- delete buttons should have access to the todo id         c
+- Clicking delete should update todoList.tdos and the DOM  c
 
 
 

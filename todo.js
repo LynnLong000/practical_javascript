@@ -1,7 +1,7 @@
 /* the teacher is using plunker but i'd rather stay in my C9
 hopefully that is not a issue 
 */
-// version 9 deleted todolist.displaytodos
+// version 10 place a delete button near each task created 
 var todoList = {
     todos:[],
     addTodo:function(todoText){
@@ -50,12 +50,8 @@ var handlers ={
         addTodoTextInput.value = '';
         view.displayTodos();
     },
-    changeTodo:function(){
-        var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
-        var changeTodoTextInput = document.getElementById('changeTodoTextInput');
-        todoList.changeTodo(changeTodoPositionInput.valueAsNumber,changeTodoTextInput.value);
-        changeTodoPositionInput.value ='';
-        changeTodoTextInput.value = '';
+    changeTodo:function(position){
+        todoList.deleteTodo(position);
         view.displayTodos();
     },
     deleteTodo:function(){
@@ -97,9 +93,49 @@ var view = {
             } else {
                 todoTextWithCompletion= '( )' + todo.todoText;
             }
-            
+            todoLi.id = i;
             todoLi.textContent = todoTextWithCompletion;
+            todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi);
         }
+    },
+    createDeleteButton:function(){
+        var deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'deleteButton';
+        return deleteButton;
+    },
+    setUpEventListeners:function(){
+        var todosUl = document.querySelector('ul');
+        
+        todosUl.addEventListener('click',function(){
+            
+            //get the element that was clicked on 
+            var elementClicked = event.target;
+    
+            // check if teh element is click is the delete button
+           if(elementClicked.className === 'deleteButton'){
+               
+                // run handlers.deleteTodo(position).
+                handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+           }
+        });
     }
 };
+
+view.setUpEventListeners();
+/* putting this in veiw  method
+var todosUl = document.querySelector('ul');
+
+todosUl.addEventListener('click',function(){
+    
+    //get the element that was clicked on 
+    var elementClicked = event.target;
+    
+    // check if teh element is click is the delete button
+    if(elementClicked.className === 'deleteButton'){
+        
+        // run handlers.deleteTodo(position).
+        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+    }
+}); */
