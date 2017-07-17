@@ -1,20 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head> <!--  things that will not appear on the page  -->
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="todo.js"></script>
-    <title>Document</title>
-</head>
+ </head>
 <body><!--  things that will appear on the page  -->
     <h1>Todo List</h1>
     
-    <div>
-        <button onclick="handlers.displayTodos()">Display Todo</button>
+    <div><!--  deleted the display todo button -->
         <button onclick="handlers.toggleAll()">Toggle All</button>
     </div>
     <div>
-        <button onclick="handlers.addTodos()">Add</button>
-        <input id="addTodoTextInput"type="text">
+        <button onclick="handlers.addTodo()">Add</button>
+        <input id="addTodoTextInput" type="text">
     </div>
     <div>
         <button onclick="handlers.changeTodo()">Change Todo</button>
@@ -22,7 +18,7 @@
         <input id="changeTodoTextInput" type="text">
     </div>
     <div>
-        <button onclick="handlers.deleteTodos">delete</button>
+        <button onclick="handlers.deleteTodo()">delete</button>
         <input id="deleteTodoPositionInput" type='number'>
     </div>
     <div>
@@ -30,12 +26,12 @@
         <input id="toggleCompletedPositionInput" type='number'>
     </div>
     
+    <ul>
+        
+    </ul>
     
-    <!--refactoring in html code above
-    <button id="displayTodosButton">Display Todo</button>
-    <button id="toggleAllButton">Toggle All</button>
-    -->
+
     
-    <script type="text/javascript" src="todo.js"></script>
+    <script src="todo.js"></script>
 </body>
 </html>

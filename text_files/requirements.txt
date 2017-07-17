@@ -47,6 +47,10 @@ v8
 - It should have working controls for .deleteTodo          C
 - It should have working controls for .toggleCompleted     C
 
+V9
+- There should be an li element for every todoList   c
+- Each li element should contain .todoText           c
+- Each li element should show .completed             c
 
 
 
