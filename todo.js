@@ -51,14 +51,16 @@ var handlers ={
         addTodoTextInput.value = '';
         view.displayTodos();
     },
-    changeTodo:function(position){
-        todoList.deleteTodo(position);
+    changeTodo:function(){
+        var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+        var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+        todoList.changeTodo(changeTodoPositionInput.valueAsNumber,changeTodoTextInput.value);
+        changeTodoPositionInput.value = "";
+        changeTodoTextInput.value="";
         view.displayTodos();
     },
-    deleteTodo:function(){
-        var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
-        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
-        deleteTodoPositionInput.value ='';
+    deleteTodo:function(position){
+        todoList.deleteTodo(position);
         view.displayTodos();
     },
     toggleCompleted:function(){
@@ -79,20 +81,23 @@ var view = {
     displayTodos:function(){
          var todosUl = document.querySelector('ul');
          todosUl.innerHTML = '';
-        for(var i=0;i<todoList.todos.length;i++){
+        
+        todoList.todos.forEach(function(todo,position){
             var todoLi = document.createElement('li');
-            var todo = todoList.todos[i];
             var todoTextWithCompletion ="";
             if(todo.completed === true){
                 todoTextWithCompletion = '(x)' + todo.todoText;
             } else {
                 todoTextWithCompletion= '( )' + todo.todoText;
             }
-            todoLi.id = i;
+            todoLi.id = position;
             todoLi.textContent = todoTextWithCompletion;
+            //when in a callback function we can not use this to call the object
             todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi);
-        }
+            // need the this here to in the call back to get to the object
+        }, this);
+        
     },
     createDeleteButton:function(){
         var deleteButton = document.createElement('button');
@@ -103,7 +108,7 @@ var view = {
     setUpEventListeners:function(){
         var todosUl = document.querySelector('ul');
         
-        todosUl.addEventListener('click',function(){
+        todosUl.addEventListener('click',function(event){
             
             //get the element that was clicked on 
             var elementClicked = event.target;
