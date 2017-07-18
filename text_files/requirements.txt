@@ -59,16 +59,6 @@ v10
 - delete buttons should have access to the todo id         c
 - Clicking delete should update todoList.tdos and the DOM  c
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+v11
+- todoList.toggleAll should use for each   c
+- view.displayTodos should use for each    c
