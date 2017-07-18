@@ -1,3 +1,70 @@
 understanding this 
 
-window = object that represnt the window.
+case one - in a regular function(or if your are not in a function at all ), this points to window. this is the default case
+
+
+window = object that represnt the window of the web browser.
+
+function logThis(){
+    console.log(this);
+}
+
+logThis();//window
+
+case two When a function is called as a method, this points tot he object that's on the left side of the dot AKA left of the dot rule
+
+var myObject = {
+    myMethod: function(){
+        console.log(this);
+    }
+};
+
+myObject.myMethod(); //myObject
+
+case 3 whena function is called as a constructor, this points to the object that the constructor is creating // have not seen yet 
+
+
+function Person(name){
+    // this = {}
+    this.name = name; // this gets a name property //called lynn
+    // return this
+    }
+    
+    Person('lynn')  // not this way
+    new Person('lynn') // this way
+    
+    
+    case 4 :  when you explicity set the value of THIS manually using bind, apply or call, it's all up to you 
+    
+    
+    method on functions
+    returns a copy of the function where 'this'
+    is set to the first arugment passed into .bind()
+    
+
+var explicitySetLogThis = logThis.bind({name:'lynn'});
+
+// almost the same -  save and run immedately  
+logThis.apply(); // must pass with a array 
+logThis.call(); // just place them in 
+
+
+function logThisWithArguments(greeting,name){
+    console.log(greeting,name);
+    console.log(this);
+
+}
+
+
+logThisWithArguments.apply({name:'lynn'},['hi,'lynn']);
+
+logThisWithArguments.call({name:'lynn'},'hi,'lynn');
+
+
+function can only be bind  once
+
+
+case five : review -  in a call back function, apply the above rules methodically 
+
+i just watched
+
